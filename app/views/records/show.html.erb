@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Continent:</b>
+  <%= @record.continent %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @record.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @record.city %>
+</p>
+
+<p>
+  <b>Thoughts:</b>
+  <%= @record.thoughts %>
+</p>
+
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>
