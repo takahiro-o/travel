@@ -1,5 +1,12 @@
+<div data-role="header"  data-position="fixed" data-theme="d" >
 <h1>旅アプリ</h1>
-
+</div>
+<div data-role="content">
+<div style="margin:0 3px;">
+	<ul data-role="listview" data-theme="c" data-inset="true">
+		<li>test</li>
+	</ul>
+</div>
 <table>
   <tr>
     <th>Continent</th>
@@ -10,8 +17,9 @@
     <th></th>
     <th></th>
   </tr>
-
+</div>
 <% @records.each do |record| %>
+
   <tr>
     <td><%= record.continent %></td>
     <td><%= record.country %></td>
