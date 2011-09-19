@@ -1,37 +1,26 @@
-<div data-role="header"  data-position="fixed" data-theme="d" >
+<div data-role="header"data-position="fixed" data-theme="d" >
 <h1>旅アプリ</h1>
 </div>
-<div data-role="content">
+<br />
 <div style="margin:0 3px;">
-	<ul data-role="listview" data-theme="c" data-inset="true">
-		<li>test</li>
+    <ul data-role="listview" data-theme="c" data-inset="true">
+      <li>
+        <a href="http://localhost:3000/records#/records/new">新規作成</a>
+      </li>
 	</ul>
 </div>
-<table>
-  <tr>
-    <th>Continent</th>
-    <th>Country</th>
-    <th>City</th>
-    <th>Thoughts</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-</div>
+<br />
+<div style="margin:0 3px;">
+<ul data-role="listview" data-theme="c" data-inset="true">
 <% @records.each do |record| %>
-
-  <tr>
-    <td><%= record.continent %></td>
-    <td><%= record.country %></td>
-    <td><%= record.city %></td>
-    <td><%= record.thoughts %></td>
-    <td><%= link_to 'Show', record %></td>
-    <td><%= link_to 'Edit', edit_record_path(record) %></td>
-    <td><%= link_to 'Destroy', record, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<b><basefont size="5"><%= link_to record.country, record %></basefont></b>	<%= link_to 'Destroy', record, :confirm => 'Are you sure?', :method => :delete %>
+<br /><br /><br />
 <% end %>
-</table>
+</ul>
+</div>
 
 <br />
 
-<%= link_to 'New Record', new_record_path %>
+<div data-role="footer">
+	<h4>ruby on rails</h4>
+</div>
