@@ -1,5 +1,15 @@
 <div data-role="header"data-position="fixed" data-theme="d" >
-<h1>旅アプリ</h1>
+<html>
+<% t = Time.now %>
+<% if (6..11).include?(t.hour) %>
+	<h1>おはようございます！旅アプリへようこそ。</h1>
+<% elsif (12..18).include?(t.hour) %>
+	<h1>こんにちは！旅アプリへようこそ。</h1>
+<% else %>
+	<h1>こんばんは！旅アプリへようこそ。</h1>
+<% end %>
+<p>現在時刻： [<%= t.strftime("%Y-%m-%d %H:%M:%S") %>]</p>
+</html>
 </div>
 <br />
 <div style="margin:0 3px;">
@@ -20,6 +30,8 @@
 </div>
 
 <br />
+
+
 
 <div data-role="footer">
 	<h4>ruby on rails</h4>
